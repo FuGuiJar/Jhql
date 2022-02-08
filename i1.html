@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			
+		</div>
+		<script src="jhql-github.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			
+			let data = {
+				gitName: '',
+				token: ''
+			};
+			let jhql =  new Jhql(data);
+			let content = `[
+				{
+					"id": 4,
+					"userId": 2,
+					"price": 1.1,
+					"title": "delectus aut autem",
+					"completed": false
+				},
+				{
+					"id": 4,
+					"userId": 2,
+					"price": 1.1,
+					"title": "delectus aut autem",
+					"completed": false
+				}
+				]`;
+			
+			
+			
+			
+			
+			// jhql.select('me').then(res => {
+			// 	console.log(res);
+			// });	
+			
+			// jhql.select('me',(item)=>{
+			// 	return item.id === 2 
+			// },['userId','title','id']).then(res =>{
+			// 	console.log(res);
+			// });	
+			
+			// jhql.insert('me',content).then(data => {
+			// 	console.log(data);
+			// });	
+				
+			// jhql.update('me', {
+			// 	price: 0,
+			// 	title: '这是一条测试数据'
+			// },(user)=> {
+			// 	return user.id === 4
+			// }).then(data => {
+			// 	console.log(data);
+			// });	
+			
+			// jhql.init().then(data => {
+			// 	console.log(data)
+			// });	
+				
+			// jhql.create('me','[]').then(data => {
+			// 	console.log(data)
+			// });		
+			
+			// jhql.show().then(data => {
+			// 	console.log(data)
+			// });	
+			// console.dir(jhql);
+			
+			
+			// jhql.create('i1')
+			// 	.then(res=> {
+			// 		console.log(res);
+			// 	})
+			
+			// jhql.delete('me',(item)=> {
+			// 	return item.userId === 2
+			// 	})
+			// 	.then(res => {
+			// 	console.log(res);
+			// });
+			
+			
+			// jhql.remote('i1').then(res=> {
+			// 	console.log(res);
+			// });
+		
+		</script>
+	</body>
+</html>
