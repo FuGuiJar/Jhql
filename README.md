@@ -1,18 +1,52 @@
 # Jhql
 
+
+
+> Jhql 是一款基于js 的json数据操作储存框架
+>
+> 是为解决无数据库但又想存储数据的个人博客而开发的
+>
+> 语法简单 体积小 基于es6 
+>
+> 基本功能CRUD，等等
+
+
+
 ## 1. 引用 jhql
 
+```html
+<script src="https://cdn.jsdelivr.net/gh/Fuguijar/Jhql@master/jhql-gitee.js" type="text/javascript" charset="utf-8"></script>
+```
 
 
 
+## 2. 创建Jhql 对象
 
 ```js
 let data = {
-    gitName: '',
-    token: ''
+    gitName: '', // git名称
+    token: '' // token
 };
 let jhql =  new Jhql(data);
 ```
+
+
+## 3. 初始化项目
+
+```js
+/*
+      init()
+         初始化项目
+ */
+jhql.init().then(data => {
+    console.log(data)
+});	
+```
+
+
+
+## 4. CRUD
+
 ```js
 let content = `[
     {
@@ -42,14 +76,6 @@ jhql.show().then(data => {
 });	
 
 
-/*
-      init()
-         初始化项目
- */
-jhql.init().then(data => {
-    console.log(data)
-});	
-
 
 /*
 	select(tabName,where)
@@ -71,8 +97,6 @@ jhql.select('me',(item)=>{
 /*
 	insert(tabName,data)
 		新增数据
-		! 判断数据结构必须一致
-		！分表机制
 */
 jhql.insert('me',content).then(data => {
     console.log(data);
@@ -131,4 +155,10 @@ jhql.remote('i1').then(res=> {
 ```
 
 
+
+> UI 就先鸽着吧，懒得搞了🙄
+>
+> fuguijar@qq.com 有bug 欢迎反馈 😁
+>
+> @fuguijar · 2022-02-08
 
